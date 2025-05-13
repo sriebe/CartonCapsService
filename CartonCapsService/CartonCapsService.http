@@ -1,0 +1,6 @@
+@CartonCapsService_HostAddress = http://localhost:7286
+
+GET {{CartonCapsService_HostAddress}}/CartonCapsReferral/GetFriendsList?currentUser=1
+Accept: application/json
+
+###
