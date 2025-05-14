@@ -3,7 +3,7 @@
 namespace CartonCapsService.Services
 {
 
-    public class UserProfileService : IUserReferallService
+    public class UserReferralService : IUserReferallService
     {
         public IEnumerable<Person> GetUserFriendList(String user)
         {
