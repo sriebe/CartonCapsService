@@ -28,15 +28,15 @@ namespace CartonCapsService.Controllers
 
         [HttpPost]
         [Route("ApplyReferralCredit")]
-        public bool ApplyReferralCredit(string referralCode, string newUser)
+        public IActionResult ApplyReferralCredit(string referralCode, string newUser)
         {
-            throw new NotImplementedException();
+            return Ok(true);
         }
 
         [HttpPost]
         [Route("RecordReferralInviteSent")]
-        public bool RecordReferralInviteSent(string referralCode, string newUser) {
-            throw new NotImplementedException(); 
+        public IActionResult RecordReferralInviteSent(string referralCode, string newUser) {
+            return Ok(true);
         }
 
         [HttpGet]
