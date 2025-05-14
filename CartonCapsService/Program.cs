@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IUserProfileService, UserProfileService>();
+builder.Services.AddSingleton<IUserReferallService, UserProfileService>();
 
 var app = builder.Build();
 

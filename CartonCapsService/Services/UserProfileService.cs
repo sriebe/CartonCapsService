@@ -3,7 +3,7 @@
 namespace CartonCapsService.Services
 {
 
-    public class UserProfileService : IUserProfileService
+    public class UserProfileService : IUserReferallService
     {
         public IEnumerable<Person> GetUserFriendList(String user)
         {
@@ -13,6 +13,13 @@ namespace CartonCapsService.Services
             friends.Add(new Person(2, "Frank", "Zappa"));
             return friends;
         }
+
+        public string GetReferralLink(string referralCode)
+        {
+            // TODO: Call third-party to build the referral URL with referralCode
+            return "https://deferredReferralSerice.co/dynamic_secret/" + referralCode;
+        }
+
     }
 
 }

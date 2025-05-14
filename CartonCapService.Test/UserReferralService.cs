@@ -2,7 +2,7 @@ using CartonCapsService.Services;
 
 namespace CartonCapService.Test
 {
-    public class UserProfileServiceTest
+    public class UserReferralService
     {
         [Fact]
         public void GetUserFriendListShouldReturnSomething()

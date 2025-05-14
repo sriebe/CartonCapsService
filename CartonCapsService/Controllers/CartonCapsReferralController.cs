@@ -11,9 +11,9 @@ namespace CartonCapsService.Controllers
     {
 
         private readonly ILogger<CartonCapsReferralController> _logger;
-        private readonly IUserProfileService _userProfileService;
+        private readonly IUserReferallService _userProfileService;
 
-        public CartonCapsReferralController(ILogger<CartonCapsReferralController> logger, IUserProfileService userProfileService)
+        public CartonCapsReferralController(ILogger<CartonCapsReferralController> logger, IUserReferallService userProfileService)
         {
             _logger = logger;
             _userProfileService = userProfileService;
@@ -21,9 +21,29 @@ namespace CartonCapsService.Controllers
 
         [HttpGet]
         [Route("GetFriendsList")]
-        public IEnumerable<Person> GetFriendList(String currentUser)
+        public IActionResult GetFriendList(String currentUser)
         {
-            return _userProfileService.GetUserFriendList("default");
+            return Ok(_userProfileService.GetUserFriendList("default"));
+        }
+
+        [HttpPost]
+        [Route("ApplyReferralCredit")]
+        public bool ApplyReferralCredit(string referralCode, string newUser)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        [Route("RecordReferralInviteSent")]
+        public bool RecordReferralInviteSent(string referralCode, string newUser) {
+            throw new NotImplementedException(); 
+        }
+
+        [HttpGet]
+        [Route("GetReferralLink")]
+        public IActionResult GetReferralLink(string referralCode)
+        {
+            return Ok(_userProfileService.GetReferralLink(referralCode));
         }
     }
 }
