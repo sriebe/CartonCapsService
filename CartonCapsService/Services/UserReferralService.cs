@@ -53,7 +53,19 @@ namespace CartonCapsService.Services
             // Insert Into ReferralTracking (ReferralCode, ReferralType, ReferralStatus, RefreenFirstName, RefereeLastName, RefereePhone, RefereeEmail)
             // Values (referralCode, referralType, 'Invite Sent', RefereeFirstName, RefereeLastName, RefereePhone, RefereeEmail);
 
-            Console.WriteLine("Update Referral Tracking with invite sent to {0} from Referral Code {1}", friend.FirstName, referralCode);
+            var tracking = new ReferralTracking();
+            tracking.ReferralCode = referralCode;
+            tracking.ReferralType = referralType;
+            tracking.ReferralStatus = "Invite Sent";
+            tracking.RefereeFirstName = friend.FirstName;
+            tracking.RefereeLastName = friend.LastName;
+            tracking.RefereePhone = friend.Phone;
+            tracking.RefereeEmail = friend.Email;
+
+            // _trackingContext.ReferralTracking.Add(tracking);
+            // await _trackingContext.SaveChangesAsync();
+
+            Console.WriteLine("Update Referral Tracking with invite sent to {0} from Referral Code {1}", tracking.RefereeFirstName, tracking.ReferralCode);
             return true;
         }
 
