@@ -35,6 +35,6 @@ namespace CartonCapsService.Services
         /// <param name="referralType">The type of referral: Text, Email, Share</param>
         /// <param name="friend">The friend who is the recipient of the invite</param>
         /// <returns>A boolean value indicating if the referral invite was recorded</returns>
-        public bool RecordReferralInviteSent(string referralCode, string referralType, Friend friend);
+        public Task<bool> RecordReferralInviteSent(string referralCode, string referralType, Friend friend);
     }
 }
