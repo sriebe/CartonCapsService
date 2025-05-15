@@ -11,7 +11,7 @@ namespace CartonCapsService.Services
         /// </summary>
         /// <param name="referralCode">The referralCode used for retrieving friends list</param>
         /// <returns>A lit of Person objects which are friends of the user</returns>
-        IEnumerable<ReferralTracking> GetUserFriendList(string referralCode);
+        Task<IEnumerable<ReferralTracking>> GetUserFriendList(String referralCode);
 
         /// <summary>
         /// Generate a referral link using the supplied referralCode

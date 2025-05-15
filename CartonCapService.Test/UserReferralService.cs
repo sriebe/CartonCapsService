@@ -13,7 +13,7 @@ namespace CartonCapService.Test
             // return what the repository layer provides.
             var sut = new CartonCapsService.Services.UserReferralService();
             var friendList = sut.GetUserFriendList("s");
-            Assert.Equal(2, friendList.Count());
+            Assert.Equal(2, friendList.Result.Count());
 
         }
     }

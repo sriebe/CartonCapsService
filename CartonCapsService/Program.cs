@@ -1,3 +1,4 @@
+using CartonCapsService.Models;
 using CartonCapsService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
