@@ -15,7 +15,8 @@ namespace CartonCapsService.Services
             var friend1 = new ReferralTracking();
             friend1.ReferralCode = referralCode;
             friend1.ReferralType = "Text";
-            friend1.RefereeName = "Clark Kent";
+            friend1.RefereeFirstName = "Clark";
+            friend1.RefereeLastName = "Kent";
             friend1.RefereePhone = "12223334444";
             friend1.ReferralStatus = "Invite Sent"; // TODO: Convert this to an enum or a constant
             friends.Add(friend1);
@@ -23,7 +24,8 @@ namespace CartonCapsService.Services
             var friend2 = new ReferralTracking();
             friend2.ReferralCode = referralCode;
             friend2.ReferralType = "Text";
-            friend2.RefereeName = "Lois Lane";
+            friend2.RefereeFirstName = "Lois";
+            friend2.RefereeLastName = "Lane";
             friend2.RefereePhone = "12223334445";
             friend2.ReferralStatus = "Invite Sent"; // TODO: Convert this to an enum or a constant
             friends.Add(friend2);
