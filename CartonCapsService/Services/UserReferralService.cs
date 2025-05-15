@@ -35,19 +35,19 @@ namespace CartonCapsService.Services
             return "https://url/dynamic_part/" + referralCode;
         }
 
-        public bool ApplyReferralCredit(string referralCode, string friendName)
+        public bool ApplyReferralCredit(string referralCode, Friend friend)
         {
             // TODO: Add database support
             // TODO: Creata a Friend object to hold phone and email and add logic to determine what method was used
-            Console.WriteLine("Apply credit to Referral Code {0} with credit for {1}", referralCode, friendName);
+            Console.WriteLine("Apply credit to Referral Code {0} with credit for {1}", referralCode, friend.FirstName);
             return true;
         }
 
-        public bool RecordReferralInviteSent(string referralCode, string referralType, string friendName, string friendPhone, string friendEmail)
+        public bool RecordReferralInviteSent(string referralCode, string referralType, Friend friend)
         {
             // TODO: Add database support
             // TODO: Create a Friend object to hold all friend attributes
-            Console.WriteLine("Update Referral Tracking with invite sent to {0} from Referral Code {1}", friendName, referralCode);
+            Console.WriteLine("Update Referral Tracking with invite sent to {0} from Referral Code {1}", friend.FirstName, referralCode);
             return true;
         }
 
