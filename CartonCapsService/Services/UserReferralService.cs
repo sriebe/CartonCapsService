@@ -10,6 +10,8 @@ namespace CartonCapsService.Services
             // TODO: Add database support
             var friends = new List<ReferralTracking>();
 
+            // Select From ReferralTracking Where ReferralCode = referralCode;
+
             var friend1 = new ReferralTracking();
             friend1.ReferralCode = referralCode;
             friend1.ReferralType = "Text";
@@ -38,7 +40,6 @@ namespace CartonCapsService.Services
         public bool ApplyReferralCredit(string referralCode, Friend friend)
         {
             // TODO: Add database support
-            // TODO: Creata a Friend object to hold phone and email and add logic to determine what method was used
             Console.WriteLine("Apply credit to Referral Code {0} with credit for {1}", referralCode, friend.FirstName);
             return true;
         }
@@ -46,7 +47,10 @@ namespace CartonCapsService.Services
         public bool RecordReferralInviteSent(string referralCode, string referralType, Friend friend)
         {
             // TODO: Add database support
-            // TODO: Create a Friend object to hold all friend attributes
+
+            // Insert Into ReferralTracking (ReferralCode, ReferralType, ReferralStatus, RefreenFirstName, RefereeLastName, RefereePhone, RefereeEmail)
+            // Values (referralCode, referralType, 'Invite Sent', RefereeFirstName, RefereeLastName, RefereePhone, RefereeEmail);
+
             Console.WriteLine("Update Referral Tracking with invite sent to {0} from Referral Code {1}", friend.FirstName, referralCode);
             return true;
         }
