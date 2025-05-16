@@ -16,3 +16,7 @@ Next Steps
 * Talk to the stakeholders to dive deeper into business needs
 * Review existing architecture and functionality to make certain we are following shop best practices
 * Begin the next round of coding / refactoring!
+
+Be sure to Restore NuGet packages before building / running.
+* Unit Testing uses xUnit and Moq
+* CartonCapsService uses EF Core and SQLite
