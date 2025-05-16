@@ -25,11 +25,19 @@ namespace CartonCapsService.Services
             return "https://url/dynamic_part/" + referralCode;
         }
 
+        /*
+         * This method will be called once a user successfully installs the App from a referral link.
+         * 
+         * The deferred deep link service will supply the referral code to the registration process, which will then
+         * call this endpoint to apply the credit within the existing system and update the Referral Tracking table.
+         * 
+         * The assumption is this will implemented after this is integrated with the existing system.
+         */
         public bool ApplyReferralCredit(string referralCode, Friend friend)
         {
             // TODO: Add database support
-            Console.WriteLine("Apply credit to Referral Code {0} with credit for {1}", referralCode, friend.FirstName);
-            return true;
+            Console.WriteLine("Apply credit will be part of a future release.");
+            return false;
         }
 
         public async Task<bool> RecordReferralInviteSent(string referralCode, string referralType, Friend friend)
